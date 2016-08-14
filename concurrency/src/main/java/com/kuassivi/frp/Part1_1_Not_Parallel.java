@@ -33,7 +33,7 @@ public class Part1_1_Not_Parallel {
         VideoService videoService = new VideoService();
         videoService.filterBy(Genre.ADVENTURE)
                     .observeOn(Schedulers.newThread())
-                    .map(DataBase::updateWithFavourite)
+                    .map(DataBase::checkAndUpdateForFavourite)
                     .observeOn(Schedulers.io())
                     .map(videoViewModel -> {
                         Logger.showThread("Here"); return videoViewModel;

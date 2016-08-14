@@ -9,7 +9,7 @@ import static com.kuassivi.frp.util.ThreadUtil.sleep;
 
 public class DataBase {
 
-    public static <T> T updateWithFavourite(T object) {
+    public static <T> T checkAndUpdateForFavourite(T object) {
         sleep(1000, 5000);
         IViewModel viewModel = (IViewModel) object;
         if(Logger.DEBUG)

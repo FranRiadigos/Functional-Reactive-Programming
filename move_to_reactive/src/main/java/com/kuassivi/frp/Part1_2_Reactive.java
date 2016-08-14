@@ -32,7 +32,7 @@ public class Part1_2_Reactive {
 
         videoService.filterBy(Genre.ADVENTURE)
                     // It reacts on changes
-                    .map(DataBase::updateWithFavourite)
+                    .map(DataBase::checkAndUpdateForFavourite)
                     .observeOn(main)
                     .doAfterTerminate(mainExecutor::shutdown)
                     .subscribe(

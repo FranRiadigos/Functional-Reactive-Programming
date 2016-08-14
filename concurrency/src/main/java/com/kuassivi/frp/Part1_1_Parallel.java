@@ -36,7 +36,7 @@ public class Part1_1_Parallel {
                             videoModel ->
                             Observable.just(videoModel)
                                       .observeOn(Schedulers.io())
-                                      .map(DataBase::updateWithFavourite))
+                                      .map(DataBase::checkAndUpdateForFavourite))
                     .toSortedList()
                     .flatMapIterable(videoModel -> videoModel)
                     .observeOn(main)

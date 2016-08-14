@@ -45,6 +45,6 @@ public class FavouritesObs {
     public static <T extends IFavourite> Observable<T> updateWithFavouriteParallel(T object, Scheduler scheduler) {
         return Observable.just(object)
                          .observeOn(scheduler)
-                         .map(DataBase::updateWithFavourite);
+                         .map(DataBase::checkAndUpdateForFavourite);
     }
 }
