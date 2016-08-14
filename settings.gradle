@@ -1,0 +1,12 @@
+rootProject.name = 'functional-reactive-programming'
+
+include 'core'
+include 'imperative_vs_declarative'
+include 'side_effects'
+include 'third_party_libs'
+include 'move_to_reactive'
+include 'concurrency'
+include 'resiliency'
+include 'move_to_reactive'
+include 'functional_and_reactive'
+
